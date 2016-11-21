@@ -12,7 +12,7 @@ All annotations will regularly be reviewed by the RAML Workgroup to identify pot
 
 We welcome any contributions from the community! You can add new annotations by sending a PR, adding your annotation as a RAML fragment (see code below), and the community / contributors will review before we merge it to the repository. The following needs to be committed with each PR:
 
-1. A RAML fragment that contains enough information to identify the purpose and use for the annotation. It needs to cover all necessary information that someone else quickly understands how and where the annotation can be used. All fragments needs to start with `#%RAML 1.0 AnnotationTypeDeclaration`.
+1. A RAML fragment that contains enough information to identify the purpose and use for the annotation. It needs to cover all necessary information that someone else quickly understands how and where the annotation can be used. All fragments needs to start with `#%RAML 1.0 AnnotationTypeDeclaration`, or if it is a library of annotations; with `#%RAML 1.0 Library`.
 
 2. Create an issue, explaining your annotation and what tools currently support that.
 
