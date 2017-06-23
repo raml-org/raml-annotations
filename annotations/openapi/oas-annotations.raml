@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+
+usage: |
+  This library contains a set of standard OpenAPI related annotations that are not supported in RAML.
+
+types:
+  externalDocs:
+    properties:
+      description?: string
+      url: string
+  
+annotationTypes: 
+  oas-summary: !include oas-summary.raml
+  oas-deprecated: !include oas-deprecated.raml
+  oas-info: !include oas-info.raml
+  oas-tags: !include oas-tags.raml
+  oas-schema-title: !include oas-schema-title.raml
+  oas-schema-exclusiveMaximum: !include oas-schema-exclusiveMaximum.raml
+  oas-schema-exclusiveMinimum: !include oas-schema-exclusiveMinimum.raml
+  oas-schema-format: !include oas-schema-format.raml
+  oas-schema-readOnly: !include oas-schema-readOnly.raml
+  oas-externalDocs: externalDocs
+  oas-tags-definition: !include oas-tags-definition.raml
+  oas-original-definition-name: !include oas-original-schema-name.raml
+  oas-x-: !include oas-extension.raml
+  oas-responses: !include oas-responses.raml
+  oas-responses-default: !include oas-responses-default.raml
+  oas-ref: !include oas-ref.raml
+  oas-parameter-allowEmptyValue: !include oas-parameter-allowEmptyValue.raml
+  oas-parameter-collectionFormat: !include oas-parameter-collectionFormat.raml
