@@ -1,8 +1,9 @@
 #%RAML 1.0 Library
+uses:
+  types: ./types.raml
 annotationTypes:
   namespace:
     description: |
-      this annotation type allows you to associate unique identifier with a RAML document. It is expected that
-      the value of this annotation is an globally unique string
-    type: string
+      this annotation type allows you to associate unique identifier with a RAML document.
+    type: types.uri
 (namespace): http://raml.org/vocabularies/annotations/core
