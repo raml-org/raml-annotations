@@ -17,6 +17,11 @@ description: |
   This annotation allows you to define this parameter with the RAML definition
   and place the parameter in the right request.
 
+  ## Annotation Target
+  The [annotation target](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#annotation-targets)
+  for those annotations is `SecuritySchemeSettings`.
+  You can only apply it to Security Scheme `settings` property.
+
   ## Example
   ```yaml
   annotationTypes:
@@ -58,6 +63,7 @@ description: |
 
   ## API console
   This annotation is recognized and respected by API console.
+allowedTargets: [ SecuritySchemeSettings ]
 properties:
   authorizationSettings:
     description: |
