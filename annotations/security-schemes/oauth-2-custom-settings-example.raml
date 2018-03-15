@@ -1,0 +1,43 @@
+#%RAML 1.0
+title: OAuth 2.0 custom settings annotation example
+baseUri: https://domain.com
+
+annotationTypes:
+  customOauth2Settings: !include oauth-2-custom-settings.raml
+
+securitySchemes:
+  oauth2:
+    type: OAuth 2.0
+    describedBy:
+      headers:
+        Authorization:
+          example: "Bearer token"
+    settings:
+      (customOauth2Settings):
+        authorizationGrants: [custom_grant]
+        ignoreDefaultGrants:
+        authorizationSettings:
+          queryParameters:
+            resource:
+              type: string
+              required: true
+              description: |
+                A resource ID that defines a domain of authorization.
+          headers:
+            x-auth-resource:
+              type: string
+              required: false
+        accessTokenSettings:
+          body:
+            resource:
+              type: string
+              required: true
+              description: |
+                A resource ID that defines a domain of authorization.
+      accessTokenUri: https://auth.domain.com/authorize
+      authorizationUri: https://auth.domain.com/token
+      authorizationGrants: [implicit]
+      scopes: profile
+/endpoint:
+  get:
+    securedBy: [oauth2]
