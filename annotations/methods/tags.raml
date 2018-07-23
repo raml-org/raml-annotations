@@ -1,0 +1,59 @@
+#%RAML 1.0 AnnotationTypeDeclaration
+
+uses:
+  lib: tags-lib.raml
+
+displayName: Tags Object
+description: |
+  This annotation is an equivalent of the `tags` property of the OpenAPI OAS 3.0 Specification. Note
+  that it works slighly differently than its OAS counterpart. It has been simplified and tags are
+  defined and accessed globally whether at the root of the document or on a method.
+
+  It can either be an array of references to an existing tag, e.g.
+
+  ```yaml
+  #%RAML 1.0
+  title: my example API
+
+  annotationTypes:
+    tags: !include tags.raml
+
+  (tags):
+    - name: bar
+      description: This is a "bar" tagged resource
+
+  /foo:
+    get:
+      (tags): 
+        - bar
+        - qux:
+            name: qux
+            description: This is a "qux" tagged resource
+
+  /users:
+    post:
+      (tags): [bar, qux]
+  ```
+
+  or an inline tag definition that can later be referenced:
+
+  ```yaml
+  #%RAML 1.0
+  title: my example API
+
+  annotationTypes:
+    tags: !include tags.raml
+
+  /foo:
+    get:
+      (tags):
+        - name: bar
+          description: This is a "bar" tagged resource
+
+  /users:
+    post:
+      (tags): [bar]
+  ```
+type: array
+items: string | lib.tagObject
+allowedTargets: [API, Method]
