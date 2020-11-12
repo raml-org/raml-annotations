@@ -23,14 +23,25 @@ and the following example:
 
 ### Which tools support this
 
-- [mulesoft/api-console (v5.0.x)](https://github.com/mulesoft/api-console)
+- [mulesoft/api-console (> v5.0.x)](https://github.com/mulesoft/api-console)
 
 ## `pkce`
 
-### Purpose
+### Purpose of the PKCE annotation
 
 Defines annotation that adds support for RFC 7636: Proof Key for Code Exchange.
 
-### Which tools support this
+### Files related to PKCE support
 
-- [mulesoft/api-console (v6.x.x)](https://github.com/mulesoft/api-console)
+This directory contains the following RAML `AnnotationTypeDeclaration` fragment:
+
+- oauth-2-pkce.raml
+
+and the following example:
+
+- oauth-2-pkce-example.raml
+
+### API tools support PKCE
+
+- [mulesoft/api-console (> v6.x.x)](https://github.com/mulesoft/api-console)
+- [advanced-rest-client/oauth-authorization (> v5.0.0)](https://github.com/advanced-rest-client/oauth-authorization)
