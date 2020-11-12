@@ -1,0 +1,33 @@
+#%RAML 1.0 AnnotationTypeDeclaration
+
+displayName: OAuth 2.0 PKCE extension
+allowedTargets: [ SecuritySchemeSettings ]
+type: boolean
+
+description: |
+  OAuth 2 has standardized extension for the "code" grant type, PKCE, or Proof Key for Code Exchange
+  that is not currently supported in RAML. This annotation adds support for Anypoint products to use
+  PKCE extension when performing the authorization.
+
+  ## Annotation Target
+  The [annotation target](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#annotation-targets) for those annotations is `SecuritySchemeSettings`.
+  You can only apply it to Security Scheme `settings` property.
+
+  ## Example
+    ```yaml
+    annotationTypes:
+      customSettings: !include oauth-2-pkce.raml
+    securitySchemes:
+      oauth2:
+        type: OAuth 2.0
+        describedBy:
+          headers:
+            Authorization:
+              example: "Bearer token"
+        settings:
+          (pkce): true
+          accessTokenUri: https://auth.domain.com/authorize
+          authorizationUri: https://auth.domain.com/token
+          authorizationGrants: [implicit]
+          scopes: profile
+  ```
