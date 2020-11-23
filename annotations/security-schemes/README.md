@@ -11,7 +11,7 @@
 
 (see full [description](oauth-2-custom-settings.raml))
 
-### What's included
+### What's included?
 
 This directory contains the following RAML `AnnotationTypeDeclaration` fragment:
 
@@ -27,11 +27,11 @@ and the following example:
 
 ## `pkce`
 
-### Purpose of the PKCE annotation
+### Purpose
 
 Defines annotation that adds support for RFC 7636: Proof Key for Code Exchange.
 
-### Files related to PKCE support
+### What's included?
 
 This directory contains the following RAML `AnnotationTypeDeclaration` fragment:
 
@@ -41,7 +41,7 @@ and the following example:
 
 - oauth-2-pkce-example.raml
 
-### API tools support PKCE
+### Which tools support this
 
 - [mulesoft/api-console (> v6.x.x)](https://github.com/mulesoft/api-console)
-- [advanced-rest-client/oauth-authorization (> v5.0.0)](https://github.com/advanced-rest-client/oauth-authorization)
+- [advanced-rest-client/oauth-authorization library (> v5.0.0)](https://github.com/advanced-rest-client/oauth-authorization)
