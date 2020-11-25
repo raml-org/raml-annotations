@@ -21,7 +21,7 @@ and the following example:
 
 - oauth-2-custom-settings-example.raml
 
-### Which tools support this
+### Which tools support this?
 
 - [mulesoft/api-console (> v5.0.x)](https://github.com/mulesoft/api-console)
 
@@ -41,7 +41,7 @@ and the following example:
 
 - oauth-2-pkce-example.raml
 
-### Which tools support this
+### Which tools support this?
 
 - [mulesoft/api-console (> v6.x.x)](https://github.com/mulesoft/api-console)
 - [advanced-rest-client/oauth-authorization library (> v5.0.0)](https://github.com/advanced-rest-client/oauth-authorization)
