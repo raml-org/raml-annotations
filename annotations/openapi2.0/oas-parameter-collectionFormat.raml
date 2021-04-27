@@ -1,0 +1,10 @@
+#%RAML 1.0 AnnotationTypeDeclaration
+
+usage: |
+  This annotation represents an equivalent to the `collectionFormat` property in the OpenAPI Specification which 
+  you are allowed to define inside a parameter definition.
+
+type: string 
+enum: [ csv, ssv, tsv, pipes, multi ]
+default: csv
+displayName: Parameter CollectionFormat (OAS)

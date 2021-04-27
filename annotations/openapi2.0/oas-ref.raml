@@ -1,0 +1,10 @@
+#%RAML 1.0 AnnotationTypeDeclaration
+
+usage: |
+  This annotation represents an equivalent to the `$ref` property in the OpenAPI Specification which 
+  is used to reference to other elements defined in an OpenAPI document. This can be used where `$ref`
+  cannot be directly mapped to something in RAML. For example, you can reference to a response definition
+  under a status code property (e.g. "400").
+
+type: string
+displayName: References (OAS) 
