@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: API with tags
+
+annotationTypes:
+  tags: !include tags.raml
+
+(tags):
+  - name: users
+    description: This tag denotes a "User"-related method
+
+/users:
+  get:
+    (tags): [users]
+
+  /{id}:
+    get:
+      (tags): [users]
+
+  /me:
+    get:
+      (tags):
+        - users
+        - name: alias
+          description: This is an alias
